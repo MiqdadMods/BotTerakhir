@@ -189,7 +189,7 @@ async function starts() {
 		success('2', 'Connected')
 	})
 	await client.connect({timeoutMs: 30*1000})
-        fs.writeFileSync('./Miqdad.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+        fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
